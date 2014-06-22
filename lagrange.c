@@ -13,10 +13,12 @@ int main() {
 	scanf("%f",&X);
 
 	for(i=0;i<n;i++) {
-		for(j=0,l=0;j<n;j++) {
+		for(j=0,l=1;j<n;j++) {
 			if(i==j) continue;
 			l*=(X-x[j])/(x[i]-x[j]);
+			printf("(%.4f-%.4f)/(%.4f-%.4f) ",X,x[j],x[i],x[j]);
 		}
+		printf("\n");
 		f+=y[i]*l;
 	}
 
