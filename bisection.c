@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define err 0.0001
+#define err 0.00001
 
 float f(float x)
 {
 //	return (x*x*x-4*x-9);
-	return (x*log10(x)-1.2);
+//	return (x*log10(x)-1.2);
 //	return (exp(x)-3*x);
-//	return (cos(x)-x*exp(x));
+	return (cos(x)-x*exp(x));
 }
 
 int main(int argc,char **argv)
