@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define f(x) (exp(x)-3*x)
-#define g(x) (exp(x)-3)
+#define f(x) (x*x*x-21*x+3500)
+#define g(x) (3*x*x-21)
 #define err 0.001
 
 int main(int argc,char **argv)
@@ -19,7 +19,7 @@ int main(int argc,char **argv)
 	do
 	{
 		x1=x0-(f(x0)/g(x0));
-		printf("%.4f\t%.4f\t%.4f\t%.4f\t\n",x0,f(x0),g(x0),x1);
+		printf("%.4f\t%.4e\t%.4e\t%.4f\t\n",x0,f(x0),g(x0),x1);
 		e=fabs(f(x1)-f(x0));
 		x0=x1;
 	}
@@ -27,6 +27,4 @@ int main(int argc,char **argv)
 	printf("The root is %.4f\n",x1);
 
 	return 0;
-	printf("%.4f\n",x0);
-	printf("%.4f\n",x0);
 }
